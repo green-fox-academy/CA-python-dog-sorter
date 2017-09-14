@@ -6,16 +6,24 @@ dogs = [
 {"name": "Killer", "age": 7},
 {"name": "Alma", "age": 5},
 {"name": "Korte", "age": 2},
-{"name": "Morzsa", "age": 1},
+{"name": "Morzsa", "age": 1}
 ]
 
 def printer(dogs):
 	for dog in dogs:
 		print(dog["name"] + ", " + str(dog["age"]))
 
+
 def is_in_order(this, that):
 	return this["age"] < that["age"]	
 
 
-print(is_in_order(dogs[1], dogs[0]))
-# printer(dogs)		
+def swapper(this, that):
+	first = dogs.index(this)
+	second = dogs.index(that)
+	dogs[first], dogs[second] = dogs[second], dogs[first]
+
+swapper(dogs[0], dogs[1])
+swapper(dogs[0], dogs[1])
+#print(is_in_order(dogs[1], dogs[0]))
+printer(dogs)		
