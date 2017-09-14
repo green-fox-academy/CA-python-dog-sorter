@@ -13,4 +13,9 @@ def printer(dogs):
 	for dog in dogs:
 		print(dog["name"] + ", " + str(dog["age"]))
 
-printer(dogs)		
+def is_in_order(this, that):
+	return this["age"] < that["age"]	
+
+
+print(is_in_order(dogs[1], dogs[0]))
+# printer(dogs)		
