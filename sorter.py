@@ -23,7 +23,13 @@ def swapper(this, that):
 	second = dogs.index(that)
 	dogs[first], dogs[second] = dogs[second], dogs[first]
 
-swapper(dogs[0], dogs[1])
-swapper(dogs[0], dogs[1])
-#print(is_in_order(dogs[1], dogs[0]))
+def bubble_sort(dogs):
+	for i in range(len(dogs)):
+		for j in range(len(dogs)-1-i):
+			if not is_in_order(dogs[j], dogs[j+1]):
+				swapper(dogs[j], dogs[j+1])
+
+
+
+bubble_sort(dogs)
 printer(dogs)		
