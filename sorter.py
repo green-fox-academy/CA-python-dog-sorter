@@ -9,4 +9,8 @@ dogs = [
 {"name": "Morzsa", "age": 1},
 ]
 
-print(dogs)
+def printer(dogs):
+	for dog in dogs:
+		print(dog["name"] + ", " + str(dog["age"]))
+
+printer(dogs)		
